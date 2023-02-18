@@ -7,22 +7,30 @@
  */
 int main(void)
 {
-	int n;
-	int i;
+	int i, e;
 
-	for (n = 0 ; n < 9 ; n++)
+	i = 48;
+	e = 48;
+
+	while (e < 58)
 	{
-		i = n + 1;
-		do {
-			putchar('0' + n);
-			putchar('0' + n);
-			if (n < 8)
+		i =48;
+		while (i < 58)
+		{
+			if (e != i && e < i)
 			{
+				putchar(e);
+				putchar(i);
+				if (i == 57 && e == 56)
+				{
+					break;
+				}
 				putchar(',');
-				putchar(32);
+				putchar(' ');
 			}
 			i++;
-		} while (i < 10);
+		}
+		e++;
 	}
 	putchar('\n');
 	return (0);
