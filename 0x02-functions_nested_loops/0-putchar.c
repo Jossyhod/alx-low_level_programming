@@ -1,20 +1,13 @@
 #include "main.h"
 
 /**
- * main - Program to print putchar as a message.
+ * _putchar - Program to print putchar as a message.
+ * @c: The character to print
  *
- * Return: Always 0 (Success)
+ * Return: Always 1 (Success)
+ * on error -1 is returned
  */
-int main(void)
+int _putchar(char c)
 {
-	int str[] = {42, 78, 108, 98, 78, 56, 84, 70, 100};
-	int count, sz;
-
-	sz = sizeof(str) / sizeof(int);
-	for (count = 0; count < sz; count++)
-	{
-		_putchar(str[count]);
-	}
-	_putchar('\n');
-	return (0);
+	return (write(1, &c, 1));
 }
