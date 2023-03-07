@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * -pow_recursion - function that returns the factorial of a given number
+ * factorial - function that returns the factorial of a given number
  *  @n: input number
  *  Return: result of power.
  */
-int _pow_recursion(int n)
+int factorial(int n)
 {
 	if (n < 0)
 		return (-1);
