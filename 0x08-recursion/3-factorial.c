@@ -1,17 +1,16 @@
 #include "main.h"
 
 /**
- * -pow_recursion - function that returns value of x raised to power n
- *  @x: value to raise
- *  @n: power
- *
+ * -pow_recursion - function that returns the factorial of a given number
+ *  @n: input number
  *  Return: result of power.
  */
-int _pow_recursion(int x, int n)
+int _pow_recursion(int n)
 {
-        if (n < 0)
-                return (-1);
-        if (n == 0)
-                return (1);
-        return (x * _pow_recursion(x, n - 1));
+	if (n < 0)
+		return (-1);
+	else if (n == 0)
+		return (1);
+	else
+		return (n * factorial(n - 1));
 }
